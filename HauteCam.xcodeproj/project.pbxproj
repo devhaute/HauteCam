@@ -12,6 +12,8 @@
 		B439D6D92770C618005646AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B439D6D82770C618005646AE /* Preview Assets.xcassets */; };
 		B4D8F6DB2770C9170048DFF0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8F6DA2770C9170048DFF0 /* CameraView.swift */; };
 		B4D8F6E12770CC820048DFF0 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8F6E02770CC820048DFF0 /* CameraViewModel.swift */; };
+		B4D8F6E42770D1880048DFF0 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8F6E32770D1880048DFF0 /* CameraPreviewView.swift */; };
+		B4D8F6E62770D2D10048DFF0 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8F6E52770D2D10048DFF0 /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		B439D6D82770C618005646AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4D8F6DA2770C9170048DFF0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B4D8F6E02770CC820048DFF0 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		B4D8F6E32770D1880048DFF0 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		B4D8F6E52770D2D10048DFF0 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		B439D6D02770C617005646AE /* HauteCam */ = {
 			isa = PBXGroup;
 			children = (
+				B4D8F6E22770D15A0048DFF0 /* Utilities */,
 				B4D8F6D82770C8070048DFF0 /* Service */,
 				B4D8F6D72770C8010048DFF0 /* Models */,
 				B4D8F6D62770C7FA0048DFF0 /* Extensions */,
@@ -91,6 +96,7 @@
 		B4D8F6D72770C8010048DFF0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4D8F6E52770D2D10048DFF0 /* Camera.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +138,14 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B4D8F6E22770D15A0048DFF0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B4D8F6E32770D1880048DFF0 /* CameraPreviewView.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D8F6E42770D1880048DFF0 /* CameraPreviewView.swift in Sources */,
+				B4D8F6E62770D2D10048DFF0 /* Camera.swift in Sources */,
 				B439D6D22770C617005646AE /* HauteCamApp.swift in Sources */,
 				B4D8F6DB2770C9170048DFF0 /* CameraView.swift in Sources */,
 				B4D8F6E12770CC820048DFF0 /* CameraViewModel.swift in Sources */,
@@ -340,6 +356,7 @@
 				DEVELOPMENT_TEAM = 8BMNZ3PCHN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 촬영을 위하여 앱이 카메라 접근이 가능하도록 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -369,6 +386,7 @@
 				DEVELOPMENT_TEAM = 8BMNZ3PCHN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 촬영을 위하여 앱이 카메라 접근이 가능하도록 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

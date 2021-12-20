@@ -1,27 +1,5 @@
 import SwiftUI
 
-//class CameraViewModel: ObservableObject {
-//    @Published var isFlashOn = false
-//    @Published var isSilentModeOn = false
-//
-//    func switchFlash() {
-//        isFlashOn.toggle()
-//    }
-//
-//    func switchSilent() {
-//        isSilentModeOn.toggle()
-//    }
-//
-//    func capturePhoto() {
-//        print("[CameraViewModel]: Photo captured!")
-//    }
-//
-//    func changeCamera() {
-//        print("[CameraViewModel]: Camera changed!")
-//    }
-//}
-
-
 struct CameraView: View {
     @StateObject private var cameraVM = CameraViewModel()
     
@@ -29,7 +7,10 @@ struct CameraView: View {
     
     var body: some View {
         ZStack {
-            Color.black
+            cameraVM.cameraPreview.ignoresSafeArea()
+                .onAppear {
+                    cameraVM.configure()
+                }
             
             VStack {
                 HStack(spacing: 50) {
